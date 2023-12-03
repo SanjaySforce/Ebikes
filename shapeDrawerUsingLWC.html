@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Shape Drawer">
+        <lightning-combobox
+            label="Select a Shape"
+            name="selectShape"
+            value={selectedShape}
+            options={shapeOptions}
+            onchange={handleShapeChange}>
+        </lightning-combobox>
+        <lightning-combobox
+            label="Select a Color"
+            name="selectColor"
+            value={selectedColor}
+            options={colorOptions}
+            onchange={handleColorChange}>
+        </lightning-combobox><br/>
+        <lightning-button variant="brand" label="Draw Shape" onclick={handleShapeWithColor}></lightning-button>
+        <div class="canvas-container">
+            <canvas width="300" height="300" lwc:dom="manual"></canvas>
+        </div>
+    </lightning-card>
+</template>
